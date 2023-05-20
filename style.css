@@ -66,6 +66,10 @@ body {
     text-decoration: none;
 }
 
+main {
+    margin-top: 44px;
+}
+
 p.about {
     color: var(--gunmetal);
     font-size: 22px;
@@ -78,7 +82,6 @@ ol#events-list>li {
 }
 
 aside {
-    margin-top: 44px;
     display: table;
     width: 100%;
     background-color: white;
@@ -119,10 +122,19 @@ section {
 }
 
 
-.demo--img {
+.demo--img, .demo--canvas {
     width: 80%;
     height: 260px;
+}
+
+.demo--img{
     object-fit: cover;
+}
+
+.demo--canvas {
+    background-color: var(--teal);
+    margin: 0 auto;
+    font-size: 31px;
 }
 .info-container {
     width: 66%;

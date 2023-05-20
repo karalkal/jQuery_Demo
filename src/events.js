@@ -55,7 +55,6 @@ $("document").ready(() => {
         const newCrap = ('<p style="background-color: red">Just some random crap!</p>')
         const para4 = $("div#demo2 p:contains('Paragraph 4')").eq(0)
         // in div get all p elements with text, then select only one ???? 
-        console.log(para4, newCrap)
         para4.before(newCrap)
         $("#info2").replaceWith((image3))
 
