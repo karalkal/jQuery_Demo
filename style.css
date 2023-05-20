@@ -1,17 +1,15 @@
 :root {
     /* CSS HEX */
-    --royal-blue-traditional: #0a2463ff;
-    --celestial-blue: #3e92ccff;
-    --ghost-white: #fffaffff;
-    --cerise: #d8315bff;
-    --eerie-black: #1e1b18ff;
+    --gunmetal: #022b3aff;
+    --teal: #1f7a8cff;
+    --columbia-blue: #bfdbf7ff;
+    --lavender-web: #e1e5f2ff;
 
     /* CSS HSL */
-    --royal-blue-traditional: hsla(222, 82%, 21%, 1);
-    --celestial-blue: hsla(205, 58%, 52%, 1);
-    --ghost-white: hsla(300, 100%, 99%, 1);
-    --cerise: hsla(345, 68%, 52%, 1);
-    --eerie-black: hsla(30, 11%, 11%, 1);
+    --gunmetal: hsla(196, 93%, 12%, 1);
+    --teal: hsla(190, 64%, 34%, 1);
+    --columbia-blue: hsla(210, 78%, 86%, 1);
+    --lavender-web: hsla(226, 40%, 92%, 1);
 }
 
 html {
@@ -27,14 +25,16 @@ html {
 }
 
 body {
-    background-color: var(--ghost-white);
-    margin: 35px 88px;
+    background-color: var(--lavender-web);
+    margin: 0 88px;
     font-family: 'Source Code Pro', monospace;
 }
 
 #nav-menu {
     display: flex;
     justify-content: space-between;
+    height: 12%;
+    margin-top: 22px;
 }
 
 #nav-menu>li {
@@ -43,15 +43,11 @@ body {
     border-radius: 8px;
     border: none;
     margin: 0 29px;
-    background-color: var(--eerie-black);
+    background-color: var(--teal);
     justify-content: center;
     /* center text in span items inside */
 }
 
-ul {
-    margin: 0;
-    padding: 0;
-}
 
 #nav-menu>li:first-child {
     margin-left: 0;
@@ -62,7 +58,7 @@ ul {
 }
 
 #nav-menu>li>a {
-    color: var(--celestial-blue);
+    color: var(--columbia-blue);
     font-weight: 800;
     font-size: 22px;
     padding: 11px;
@@ -70,29 +66,67 @@ ul {
     text-decoration: none;
 }
 
-main {
-    margin-top: 44px;
-}
-
-
 p.about {
-    color: var(--royal-blue-traditional);
+    color: var(--gunmetal);
     font-size: 22px;
     text-align: justify;
 }
 
 ol#events-list>li {
     list-style: decimal inside;
-    /* to prevent the numbers going outside div */
+    /* to prevent the numbers going outside div when li items aligned centrally*/
 }
 
-.canvas {
+aside {
+    margin-top: 44px;
+    display: table;
+    width: 100%;
+    background-color: white;
+    padding: 11px;
+}
 
-    margin: 0 auto;
-    border: 4px solid var(--celestial-blue);
+aside>div.code {
+    padding: 8px;
+    border-top: 1px solid black;
+    font-size: 15px;
+    margin: 22px 0;
+    background-color: white;
+}
+
+div.code>code {
+    white-space: pre-wrap;
+}
+
+section {
+    margin: 22px 0;
+    display: flex;
+    justify-content: space-between;
+    height: 530px;
+}
+
+.demo-container {
+    width: 31%;
+    padding: 11px;
+    border: 4px solid var(--teal);
     text-align: center;
     padding: 11px;
-    background-color: var(--cerise);
+    background-color: var(--columbia-blue);
+}
+
+.info-container {
+    width: 66%;
+    padding: 11px;
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.info-container>img {
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
 }
 
 .action-buttons {
@@ -101,19 +135,12 @@ ol#events-list>li {
     height: 44px;
     border-radius: 8px;
     border: none;
-    background-color: var(--royal-blue-traditional);
-    color: var(--ghost-white);
+    background-color: var(--gunmetal);
+    color: white;
     text-align: center;
 }
 
-
-#canvas--events {
-    width: 440px;
-    height: 620px;
-}
-
-#canvas--events>img {
-    width: 100%;
-    height: 62%;
-    object-fit:cover;
+.demo--img {
+    width: 40%;
+    object-fit: cover;
 }

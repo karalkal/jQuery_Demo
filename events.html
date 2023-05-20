@@ -29,21 +29,85 @@
         </ul>
     </nav>
     <main>
-        <div class="canvas" id="canvas--events">
-            <h2>some heading</h2>
-            <ol id="events-list">
-                <li>li Item</li>
-                <li>li Item</li>
-                <li>li Item</li>
-                <li>li Item</li>
-            </ol>
-            <p style="background-color: aqua;">Paragraph 1</p>
-            <p style="background-color: yellow">Paragraph 2</p>
-            <img src="img/pexels-mathias-reding-16124576.jpg" alt="piano">
+        <aside>
+            <table>
+                <tr>
+                    <td>
+                        <p>Description:&nbsp;&nbsp;</p>
+                    </td>
+                    <td>
+                        <h3>Attach an event handler function for one or more events to
+                            the selected elements. </h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    <p>Syntax:&nbsp;&nbsp;</p>
+                    </td>
+                    <td>
+                    <h3>on( events [, selector ] [, data ], handler ) </h3>
+                    </td>
+                </tr>
+            </table>
+            <div class="code">
+                <code>                var count = 0;
+                    $( "body" ).on( "click", "p", function() {
+                        $( this ).after( "&lt;p>Another paragraph! " + (++count) + "&lt;/p>" );
+                    });</code>
+            </div>
+        </aside>
+        <section>
+            <div class="demo-container">
+                <h2>some heading</h2>
+                <ol id="events-list">
+                    <li>li Item 1</li>
+                    <li>li Item 2</li>
+                    <li>li Item 3</li>
+                    <li>li Item 4</li>
+                </ol>
+                <p>Paragraph 1</p>
+                <p>Paragraph 2</p>
+                <img src="img/demo-images/pexels-mathias-reding-16124576.jpg" alt="piano" class="demo--img">
+                <div class="buttons-panel">
+                    <button id="change-css-btn" class="action-buttons">css</button>
+                    <button id="toggle-fade-btn" class="action-buttons">fadeToggle</button>
+                </div>
+            </div>
 
-            <button id="change-css-btn" class="action-buttons">css</button>
-            <button id="toggle-fade-btn" class="action-buttons">fadeToggle</button>
-        </div>
+            <div class="info-container">
+                <div id="info1">
+                    <h3>Edit CSS properties with .css()</h3>
+                    <h3>Set src attribute of img with .attr()</h3>
+                    <h3>Display/hide elements by animating opacity with .fadeToggle()</h3>
+                    <h1>.css() </h1>
+                    <p> Get the value of a computed style property for the first element in the set of matched elements
+                        or set one or more CSS properties for every matched element. </p>
+                    <p> .css( propertyName ) </p>
+                    <p> .css( propertyNames ) </p>
+                    <p> .css( propertyName, value ) </p>
+                    <p> .css( propertyName, function ) </p>
+                    <p> .css( properties ) </p>
+
+                    <h1>.attr() </h1>
+                    <p>Get the value of an attribute for the first element in the set of matched elements or set one or
+                        more
+                        attributes for every matched element. </p>
+                    <p> .attr( attributeName ) </p>
+                    <p> .attr( attributeName, value )
+                    <p> .attr( attributes ) </p>
+                    <p> .attr( attributeName, function ) </p>
+
+                    <h1> .fadeToggle( [duration ] [, easing ] [, complete ] )</h1>
+                    <h3>defauld duration: 400ms,  default easing: swing, complete is a call back function</h3>
+
+                                       
+                </div>
+            </div>
+        </section>
+
+        <section>
+        </section>
+
     </main>
 </body>
 
