@@ -36,30 +36,143 @@
                         <p>Description:&nbsp;&nbsp;</p>
                     </td>
                     <td>
-                        <h3>Attach an event handler function for one or more events to
-                            the selected elements. </h3>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p>Syntax:&nbsp;&nbsp;</p>
-                    </td>
-                    <td>
-                        <h3>on( events [, selector ] [, data ], handler ) </h3>
+                        <h3>The jQuery library provides several techniques for adding animation to a web page. These
+                            include simple, standard animations that are frequently used, and the ability to craft
+                            sophisticated custom effects. </h3>
                     </td>
                 </tr>
             </table>
             <div class="code">
-                <code>                var count = 0;
-                    $( "body" ).on( "click", "p", function() {
-                        $( this ).after( "&lt;p>Another paragraph! " + (++count) + "&lt;/p>" );
-                    });</code>
+                <table>
+                    <tr>
+                        <td>
+                            <h3>.animate() </h3>
+                        </td>
+                        <td>Perform a custom animation of a set of CSS properties.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>.clearQueue() </h3>
+                        </td>
+                        <td>Remove from the queue all items that have not yet been run.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>.delay() </h3>
+                        </td>
+                        <td>Set a timer to delay execution of subsequent items in the queue.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>.dequeue() </h3>
+                        </td>
+                        <td>Execute the next function on the queue for the matched elements.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>.fadeIn()</h3>
+                        </td>
+                        <td>Display the matched elements by fading them to opaque.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>.fadeOut()</h3>
+                        </td>
+                        <td>Hide the matched elements by fading them to transparent.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>.fadeTo()</h3>
+                        </td>
+                        <td>Adjust the opacity of the matched elements.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>.fadeToggle()</h3>
+                        </td>
+                        <td>Display or hide the matched elements by animating their opacity.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>.finish()</h3>
+                        </td>
+                        <td>Stop the currently-running animation, remove all queued animations, and complete all
+                            animations for the matched elements.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>.hide()</h3>
+                        </td>
+                        <td>Hide the matched elements.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>jQuery.fx.interval&nbsp;&nbsp;&nbsp;&nbsp;
+                        </td> <!--Just to push second row back :-)-->
+                        <td>The rate (in milliseconds) at which animations fire.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>jQuery.fx.off</h3>
+                        </td>
+                        <td>Globally disable all animations.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>jQuery.speed</h3>
+                        </td>
+                        <td>Creates an object containing a set of properties ready to be used in the definition of
+                            custom animations.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>.queue()</h3>
+                        </td>
+                        <td>Show or manipulate the queue of functions to be executed on the matched elements.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>.show()</h3>
+                        </td>
+                        <td>Display the matched elements.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>.slideDown()</h3>
+                        </td>
+                        <td> Display the matched elements with a sliding motion.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>.slideToggle()</h3>
+                        </td>
+                        <td> Display or hide the matched elements with a sliding motion.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>.slideUp()</h3>
+                        </td>
+                        <td>Hide the matched elements with a sliding motion.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>.stop()</h3>
+                        </td>
+                        <td>Stop the currently-running animation on the matched elements.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>.toggle()</h3>
+                        </td>
+                        <td>Display or hide the matched elements.</td>
+                    </tr>
+                </table>
             </div>
         </aside>
         <section>
             <div class="demo-container" id="demo1">
                 <div>
-                    <h2>some heading</h2>
+                    <h3>some heading</h3>
                     <ol id="events-list">
                         <li>li Item 1</li>
                         <li>li Item 2</li>
@@ -108,7 +221,7 @@
         <section>
             <div class="demo-container" id="demo2">
                 <div>
-                    <h2>another heading</h2>
+                    <h3>another heading</h3>
 
                     <ol id="events-list">
                         <li>li Item 5</li>
@@ -162,7 +275,7 @@
 </body>
 
 <script src="src/jQuery.js" type="text/javascript"></script>
-<script src="src/events.js" type="text/javascript"></script>
+<script src="src/effects.js" type="text/javascript"></script>
 
 
 </html>

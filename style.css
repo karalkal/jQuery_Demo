@@ -100,6 +100,14 @@ div.code>code {
     white-space: pre-wrap;
 }
 
+div.code>table,
+div.code>table td {
+    border: 2px solid var(--columbia-blue);
+    border-collapse: collapse;
+    padding: 4px;
+    margin: 0 auto;
+}
+
 section {
     height: 620px;
     margin: 22px 0;
