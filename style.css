@@ -121,21 +121,28 @@ section {
     justify-content: space-between;
 }
 
-
-.demo--img, .demo--canvas {
-    width: 80%;
-    height: 260px;
-}
-
-.demo--img{
+.demo--img {
     object-fit: cover;
+    width: 80%;
+    height: 310px;
+    margin-top: 11px;
 }
 
 .demo--canvas {
-    background-color: var(--teal);
-    margin: 0 auto;
-    font-size: 31px;
+    width: 80%;
+    height: 150px;
+    margin: 11px auto 0;
+    font-size: 22px;
 }
+
+.tealBG {
+    background-color: var(--teal);
+}
+
+.gunmetalBG {
+    background-color: var(--gunmetal);
+}
+
 .info-container {
     width: 66%;
     padding: 11px;

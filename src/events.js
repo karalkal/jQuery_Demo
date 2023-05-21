@@ -48,19 +48,22 @@ $("document").ready(() => {
         $("#info1").replaceWith((image2))
     })
 
-
     // dblclick-btn
-    const image3 = $('<img src="img/code-images/03-dbl-mouse-down-up.png" alt="jQuery code" id="info2">');
     $("#dblclick-btn").on("dblclick", () => {
         const newCrap = ('<p style="background-color: red">Just some random crap!</p>')
         const para4 = $("div#demo2 p:contains('Paragraph 4')").eq(0)
         // in div get all p elements with text, then select only one ???? 
         para4.before(newCrap)
+
+        // replace info with code image
+        const image3 = $('<img src="img/code-images/03-dbl-mouse.png" alt="jQuery code" id="info2">');
         $("#info2").replaceWith((image3))
 
-    })
+    });
 
-    // Attach multiple event handlers simultaneously using a plain object.
+    // mousedown mouseup - Attach multiple event handlers simultaneously using a plain object.
+    const image4 = $('<img src="img/code-images/04-mouse-up-down.png" alt="jQuery code" id="info2">');
+
     $("#mousedownup-btn").on({
         mousedown: () => {
             $("div#demo2 li").css({
@@ -71,13 +74,76 @@ $("document").ready(() => {
             $("#mousedownup-btn").css("background-color", "black")
         },
         mouseup: () => {
-            $("div#demo2").html("<h2>Ain't gonna reset that man, you just refresh</h2>")
-            $("#info2").replaceWith((image3))
+            $("div#demo2").html("<h2>Alright, your mouse is up.</h2><h2>Ain't gonna reset that man, you just refresh.</h2>")
+            $("#info2").replaceWith((image4))           // replace info with code image
         }
-    })
+    });
 
+    // mouse-hover-events 
+    const mouseEnterLeave = $("#enter-leave-events")
+    const mouseHoverContainer = $("#mouse-hover-events")
+    let infoDataReplacedWithImage = false
 
+    function switchToGunmetal(selector, border) {
+        selector
+            .removeClass("tealBG")
+            .addClass("gunmetalBG")
+            .css("border", border)
+    }
+
+    function switchToTeal(selector, border) {
+        selector
+            .removeClass("gunmetalBG")
+            .addClass("tealBG")
+            .css("border", border)
+    }
+
+    function replaceInfoImg() {
+        const image5 = $('<img src="img/code-images/05-mouse-hover-events.png" alt="jQuery code" id="info2">');
+        $("#info2").replaceWith(image5)
+        infoDataReplacedWithImage = true
+        console.log("replaced!")
+    }
+
+    mouseEnterLeave.on({
+        "mouseenter": () => {
+            switchToGunmetal(mouseEnterLeave, "8px dotted yellow");
+            mouseEnterLeave.children().css("color", "violet");
+            if (!infoDataReplacedWithImage) {
+                replaceInfoImg()
+            }
+        },
+        "mouseleave": () => {
+            switchToTeal(mouseEnterLeave, "none");
+            mouseEnterLeave.children().css("color", "black")
+        }
+    });
+
+    mouseHoverContainer.hover(
+        () => {             // IN
+            mouseHoverContainer
+                .find("p:contains('HERE')")
+                .text("CHANGED TEXT")
+                .css("color", "red");
+            switchToTeal(mouseHoverContainer, "8px dotted red");
+            if (!infoDataReplacedWithImage) {
+                replaceInfoImg()
+            }
+
+        },
+        () => {             // OUT
+            mouseHoverContainer
+                .find("p:contains('CHANGED TEXT')")
+                .text("HERE")
+                .css("color", "black");
+            switchToGunmetal(mouseHoverContainer, "none");
+        })
 }
+
+
+
+
+
 )
 
 

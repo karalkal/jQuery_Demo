@@ -118,26 +118,40 @@
                     </ol>
                     <p>Paragraph 3</p>
                     <p>Paragraph 4</p>
-                    <div class="demo--canvas">
+                    <div class="demo--canvas tealBG" id="enter-leave-events">
                         <p>TRY</p>
-                        <p>mousein</p>
-                        <p>mouseout</p>
+                        <p>mouseenter</p>
+                        <p>mouseleave</p>
+                        <p>HERE</p>
+                        <p>&#9195; &#9195; &#9195; &#9195;</p>
+                    </div>
+                    <div class="demo--canvas gunmetalBG" id="mouse-hover-events">
+                        <p>&#9196; &#9196; &#9196; &#9196; </p>
+                        <p>TRY</p>
                         <p>hover</p>
                         <p>HERE</p>
-                        <p>&#9195;&#9195;&#9195;&#9195;</p>
-
                     </div>
-                </div>
 
-                <div class="buttons-panel">
-                    <button id="dblclick-btn" class="action-buttons">dblclick</button>
-                    <button id="mousedownup-btn" class="action-buttons">mousedown/mouseup</button>
+                    <div class="buttons-panel">
+                        <button id="dblclick-btn" class="action-buttons">dblclick</button>
+                        <button id="mousedownup-btn" class="action-buttons">mousedown/mouseup</button>
+                    </div>
                 </div>
             </div>
 
             <div class="info-container">
                 <div id="info2">
-                    <h1>events - click, mousein, mouseout, hover</h1>
+                    <h1>.on( "dblclick", function() {})</h1>
+                    <p> .dblclick( [eventData ], handler ) or .on( "dblclick" [, eventData ], handler )</p>
+                    <p> Bind an event handler to the “dblclick” event, or trigger that event on an element. </p>
+                    <br>
+                    <h1>.on( "mousedown", callbackFn ) and .on( "mouseup", callbackFn )</h1>
+                    <p> Please view code for demo how attaching multiple event handlers simultaneously using a plain
+                        object works. </p>
+                        <br>
+                    <h1>.hover or mouseenter/mouseleave</h1>
+                    <p>$( selector ).hover( handlerIn, handlerOut ) is shorthand for: </p>
+                    <p>$( selector ).on( "mouseenter", handlerIn ).on( "mouseleave", handlerOut );</p>
                 </div>
             </div>
         </section>
